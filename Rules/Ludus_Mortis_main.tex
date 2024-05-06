@@ -1,0 +1,75 @@
+% Body text font is Palatino!
+\documentclass[letterpaper,twocolumn,openany,nodeprecatedcode]{scrbook}
+% twoside, openright
+
+\title{Ludus Mortis}   
+\author{Tobias Blesgen & Leonardo Thome} 
+\date{\today} 
+
+\usepackage{pakete}
+
+\begin{document}
+
+%=========================================
+\begin{titlepage}
+		\centering{
+			{\fontsize{40}{48}\selectfont 
+			Ludus Mortis}
+		}\\
+		
+		\vspace{10mm}
+		\begin{figure}[h]
+            \centering
+            \includegraphics[width = 15cm]{Pictures/logo2.png}
+             \label{fig:meine-grafik}
+        \end{figure}
+        
+		\vspace{10mm}
+		\centering{
+			{\fontsize{20}{28}\selectfont Lasset die Jagt beginnen!}
+		}\\
+		\vspace{15mm}
+		\centering{\Large{Tobias Blesgen \\ Leonardo Thome}}\\
+
+		\vspace{\fill}
+		\centering \large{2020}
+\end{titlepage}
+\newpage
+%=========================================
+\tableofcontents
+\thispagestyle{headings} 
+
+\clearpage
+
+\part{Regeln}
+
+\include{Regeln/Das_Spiel}
+\include{Regeln/Charaktererstellung}
+\include{Regeln/Spielprinzip}
+\include{Regeln/Kämpfe}
+\include{Regeln/Umstände}
+\include{Regeln/Schauplätze}
+\include{Regeln/DieEwigeReise}
+
+\part{Die heimlichen Lande}
+
+\include{Charakteristiken/Arten}
+\include{Charakteristiken/Fähigkeiten}
+\include{Charakteristiken/Die_Regionen_der_heimlichen_Welt}
+\include{Charakteristiken/Ausrüstung}
+\include{Charakteristiken/NPCs}
+
+\part*{Anhang}
+
+\include{Danksagung}
+
+\newpage
+
+
+%=========================================
+
+
+
+%=========================================
+
+\end{document}

@@ -1,0 +1,37 @@
+\ExplSyntaxOn
+\RequirePackage{lettrine}
+\RequirePackage{Royal}
+
+\bool_if:NT \l_LM_layout_bool{
+    \RequirePackage{bookman}
+    \RequirePackage[type1]{gillius2}
+    \RequirePackage[notext,nomath,nott]{kpfonts}
+    \RequirePackage[T1]{fontenc}
+    \renewcommand{\sfdefault}{jkpss}
+}
+\cs_new_protected:Npn \__LM_sf_initial_family:
+  {
+    \bool_if:NTF \l__LM_layout_bool
+      { \gilliustwo }
+      { \sffamily }
+  }
+  
+\keys_define:nn { LM / fonts }
+    {
+        %Subsection
+        subsection-family .tl_set:N         = \l__LM_section_family_tl
+        subsection-family .initial:n        = \normalfont,
+        subsection-family .value_required:n = true
+        subsection-style .tl_set:N          = \l__LM_subsection_style_tl,
+        subsection-style .initial:n         = \linespread{.9} \color{titlered} \Large \scshape \RaggedRight,
+        subsection-style .value_required:n  = true,
+    }
+    
+\NewDocumentCommand{\LMSetFonts}{o}
+    {
+        \keys_set:nn{ LM / fonts} { #1 }
+    }
+
+\NewDocumentCommand{\LMFontSubsection}{}
+    {\l__LM_section_family_tl \l__LM_subsection_style_tl}
+    

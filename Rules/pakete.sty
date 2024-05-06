@@ -1,0 +1,86 @@
+\KOMAoptions{DIV=last}
+\KOMAoptions{listof=totoc}				%Aufrufen des Tabellenverzeichnisses
+
+\usepackage{trajan}
+ 
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{scalefnt} % font skalieren
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+%Zitat
+\usepackage{epigraph}
+
+%Tabellen
+
+%Boxen und Tabellen alternative
+\usepackage{tcolorbox}
+
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{array, boldline, makecell, booktabs,tabularx}
+\newcommand\btrule[1]{\specialrule{#1}{0pt}{0pt}}
+
+% Tabellenfarben
+\definecolor{Wunden}{RGB}{153, 0, 0}
+\definecolor{Gift}{RGB}{31, 122, 31}
+\definecolor{Psyche}{RGB}{133, 51, 255}
+\definecolor{Bewegung}{RGB}{51, 102, 153}
+\definecolor{myred}{RGB}{247, 216, 212}
+\definecolor{myblue}{RGB}{126, 180, 231}
+\definecolor{mytopblue}{RGB}{100, 150, 231}
+\definecolor{mydarkblue}{RGB}{211, 49, 71}
+\definecolor{mydarkred}{RGB}{179, 0, 0}
+\definecolor{myviolet}{RGB}{197,140,206}
+\definecolor{mybrown}{RGB}{118,70,53}
+\definecolor{myskin}{RGB}{216,135,110}
+\definecolor{mysilver}{RGB}{192,192,192}
+\definecolor{mygreen}{RGB}{72,172,80}
+
+%Hyperrefs innerhalb PDF
+\usepackage{hyperref}
+
+%Bilder einfügen
+%\usepackage{color}
+\usepackage{transparent}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+
+%Background 
+\usepackage{background}
+\backgroundsetup{scale=1,angle=0,firstpage=true, opacity=0.5,
+contents={\begin{tikzpicture}[remember picture,overlay]\node at ([yshift=0pt, xshift=0pt]current page.center){\includegraphics[width = 22cm]{Pictures/Paper2.jpg}};\end{tikzpicture}}}
+
+
+\usepackage[babel,german=guillemets]{csquotes}
+
+\usepackage[sc]{mathpazo}
+\linespread{1.05} 
+
+\usepackage{verbatim} % for comments
+\usepackage{listings} % for comments
+
+%\setlength{\parindent}{10pt}
+%\setlength{\parskip}{1.4ex plus 0.35ex minus 0.3ex}
+%\setlength{\parskip}{1.4ex plus 0.35ex minus 0.3ex}
+
+\usepackage{blindtext}
+\newcommand{\q}[1]{>>\textit{#1}<<}
+
+%Sectiontest
+%\RequirePackage{lib/sections}
+
+%Zeichen
+\usepackage{kpfonts}
+%\usepackage{color}
+
+\newcommand*\Herz[1]{\ensuremath{{\color{blue} #1}{\color{red}\varheartsuit}}}
+\newcommand*\Pik[1]{\ensuremath{{\color{blue} #1}{\color{black}\spadesuit}}}
+\newcommand*\Karo[1]{\ensuremath{{\color{blue} #1}{\color{red}\vardiamondsuit}}}
+\newcommand*\Kreuz[1]{\ensuremath{{\color{blue} #1}{\color{black}\clubsuit}}}
+
+%Verweise und vereinfachung
+\newcommand{\verweis}[1]{\textit{\nameref{#1}}}

@@ -1,0 +1,24 @@
+\ExplSyntaxOn
+
+\bool_if:NT \l__LM_layout_bool
+{
+    \setlength{\textfloatsep}{11pt plus 4pt minus 4pt}
+    \setlength{\intextsep{11pt plus 4pt minus 4pt}
+    \setlength{\dbltextfloatsep}{11pt plus 4pt minus 4pt}
+    
+    \setcounter{secnumdeth}{0}
+    
+    
+    %Subsection
+    \titleformat{\subsection}
+                {\LMFontSubsection}
+                {\thesubsection}
+                {1em}
+                {\nonpagebreak}
+                [ \vspace{-0.3ex} \titleline{\color{C9AD6A} \titlerule[1pt]}]
+                
+    \titlespacing*{\subsection}
+                {0pt}
+                {1.4ex plus .047ex}
+                {1.2ex}
+}
