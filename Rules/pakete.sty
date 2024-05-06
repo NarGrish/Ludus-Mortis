@@ -51,8 +51,18 @@
 
 %Background 
 \usepackage{background}
-\backgroundsetup{scale=1,angle=0,firstpage=true, opacity=0.5,
-contents={\begin{tikzpicture}[remember picture,overlay]\node at ([yshift=0pt, xshift=0pt]current page.center){\includegraphics[width = 22cm]{Pictures/Paper2.jpg}};\end{tikzpicture}}}
+\backgroundsetup{
+    scale=1,
+    angle=0,
+    firstpage=true, 
+    opacity=0.5,
+    position=current page.south,
+    vshift=0cm, % Vertikale Verschiebung
+    hshift=0cm, % Horizontale Verschiebung
+    contents={\begin{tikzpicture}[remember picture,overlay]
+        \node at ([yshift=0pt, xshift=0pt]current page.center){\includegraphics[width = \paperwidth, height = \paperheight]{Pictures/Paper2.jpg}};
+    \end{tikzpicture}}
+}
 
 
 \usepackage[babel,german=guillemets]{csquotes}
